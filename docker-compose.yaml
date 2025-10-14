@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  app:
+    # container_name: name
+    # image: name
+    build: .
+    environment:
+      - WATCHPACK_POLLING=true # hot reload!
+    volumes:
+      - ./:/app
+      - /app/node_modules/
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    working_dir: /app
+    command: tail -f /dev/null
+
+    stdin_open: true # docker run -i 
+    tty: true        # docker run -t 
+    # теперь можем запускать интерактивную оболочку $ docker-compose exec app bash
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    # docker exec -it <ID or name> sh

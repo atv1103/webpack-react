@@ -1,0 +1,43 @@
+// code --list-extensions - список расширений
+// F1 -> Dev Containers: Reopen in Container
+{
+    "name": "App in Docker",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/app",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "christian-kohler.path-intellisense",
+                "dsznajder.es7-react-js-snippets",
+                "steoates.autoimport",
+                "formulahendry.auto-rename-tag",
+                "dbaeumer.vscode-eslint",
+                "stylelint.vscode-stylelint"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "sh",
+                "editor.codeActionsOnSave": {
+                    "source.fixAll.eslint": "explicit",
+                    "source.fixAll.stylelint": "explicit"
+                },
+                "typescript.validate.enable": false,
+
+                // ESLint
+                "eslint.enable": true,
+                "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+                "eslint.useFlatConfig": true,
+                "eslint.validate": ["typescript", "typescriptreact"],
+
+                // Stylelint
+                "stylelint.enable": true,
+                "stylelint.validate": [
+                    "css",
+                    "scss"
+                ]
+            }
+        }
+    },
+    "postCreateCommand": "npm install"
+}

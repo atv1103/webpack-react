@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*",
+    "config/**/*",
+    "webpack.config.ts",
+    "*.ts",
+    "*.tsx",
+    "config/storybook/*.ts"
+  ],
+  "exclude": ["dist", "node_modules"]
+}
+
+// npx tsc --project tsconfig.eslint.json --noEmit
+// «Запустить TypeScript компилятор (tsc) с конфигурацией из tsconfig.eslint.json, но ничего не компилировать (не создавать .js файлы), только проверить типы.»

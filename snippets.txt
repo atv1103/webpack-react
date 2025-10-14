@@ -1,0 +1,24 @@
+typescriptreact.json
+
+{
+		"React component with .module.scss": {
+		"prefix": "rc",
+		"body": [
+			"import { classNames } from 'shared/lib/classNames/classNames'",
+			"import cls from './$TM_FILENAME_BASE.module.scss'",
+			"",
+			"interface ${1:$TM_FILENAME_BASE}Props {",
+			"    className?: string",
+			"}",
+			"",
+			"export const $TM_FILENAME_BASE = ({className}: ${1:$TM_FILENAME_BASE}Props) => {",
+			"  return (",
+			"    <div className={classNames(cls.$TM_FILENAME_BASE, {}, [className])}>",
+			"        $2",
+			"    </div>",
+			"  )",
+			"}"
+		],
+		"description": "create React component with .module.scss"
+	}
+}
