@@ -4,26 +4,26 @@ import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecor
 import { Theme } from '../../../app/providers/ThemeProvider/lib/ThemeContext';
 
 const meta = {
-  title: 'shared/Loader',
-  component: Loader,
-  parameters: {
-    layout: 'padded',
-  },
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'shared/Loader',
+    component: Loader,
+    parameters: {
+        layout: 'padded',
+    },
+    tags: ['autodocs'],
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
 } satisfies Meta<typeof Loader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-  args: {},
+    args: {},
 };
 
 export const Dark: Story = {
-  args: {},
+    args: {},
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
 

@@ -1,3 +1,4 @@
+/*eslint-disable react/display-name */
 import { Story } from "@storybook/react-webpack5";
 import { Theme } from "app/providers/ThemeProvider";
 

@@ -68,7 +68,7 @@ export default [
             'i18next/no-literal-string': 'off',
         }
     },
-    ..storybook.configs["flat/recommended"]
+    ...storybook.configs["flat/recommended"]
 ];
 
 // npx eslint "**/*.{ts,tsx}"

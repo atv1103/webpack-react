@@ -41,5 +41,6 @@
     "include": [
       "./config/jest/setupTests.ts", // jest-dom
       "./src/**/*.{ts, tsx}",
+      "./src/app/types/global.d.ts"
   ],
 }
